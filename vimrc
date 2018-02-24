@@ -10,6 +10,17 @@ call vundle#begin()
 "
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'tmhedberg/SimpylFold'
+Bundle 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'jnurmine/Zenburn'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
 "
 " " Add all your plugins here (note older versions of Vundle used Bundle
 " instead of Plugin)
@@ -35,7 +46,6 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-Plugin 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview=1
 
 au BufNewFile,BufRead *.py
@@ -52,41 +62,24 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set softtabstop=2    |
     \ set shiftwidth=2     |
 
-Plugin 'vim-scripts/indentpython.vim'
-
 set encoding=utf-8
 
-Bundle 'Valloric/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
 let python_highlight_all=1
 syntax on
 
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-
 set background=dark
 
-Plugin 'dracula/vim'
 color dracula
 
 call togglebg#map("<F5>")
 
 " File Browsing
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 set nu
-
-
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'airblade/vim-gitgutter'
-
-Plugin 'flazz/vim-colorschemes'
 
 if has('gui_running')
     set guifont=Hack\ 10
