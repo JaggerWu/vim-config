@@ -74,8 +74,6 @@ set background=dark
 
 color dracula
 
-call togglebg#map("<F5>")
-
 " File Browsing
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
