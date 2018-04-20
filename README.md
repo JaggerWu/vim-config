@@ -1,7 +1,11 @@
 # vim-config
 
-This is for vim config
+This is my vim config. 
 
--  Make sure vim/gvim/mvim running on your local env
-- install [Vundle](https://github.com/VundleVim/Vundle.vim)
+## How to use
 
+```
+git clone git@github.com:JaggerWu/vim-config.git
+cd vim-config
+./config.sh
+``` 
