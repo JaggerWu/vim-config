@@ -70,9 +70,7 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let python_highlight_all=1
 syntax on
 
-set background=dark
-
-color dracula
+colorscheme BlackSea
 
 " File Browsing
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -80,5 +78,10 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 set nu
 
 if has('gui_running')
-    set guifont=Hack\ 10
+    " Please install Powerline font
+    " for Linux you can use
+    " set guifont=Hack\ 10
+  
+    " This is osx.
+    set guifont=Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline:h12
 endif
