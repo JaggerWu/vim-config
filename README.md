@@ -7,5 +7,5 @@ This is my vim config.
 ```
 git clone git@github.com:JaggerWu/vim-config.git
 cd vim-config
-./config.sh
+./configure
 ``` 
