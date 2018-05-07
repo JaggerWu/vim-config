@@ -12,7 +12,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'tmhedberg/SimpylFold'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
@@ -77,11 +77,15 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 set nu
 
+let s:uname = system("uname")
+
 if has('gui_running')
     " Please install Powerline font
-    " for Linux you can use
-    " set guifont=Hack\ 10
+    if system("uname -s") == "Linux\n"
+        set guifont=Hack\ 10
+    endif
   
-    " This is osx.
-    set guifont=Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline:h12
+    if system("uname -s") == "Darwin\n"
+        set guifont=Meslo\ LG\ L\ DZ\ Regular\ for\ Powerline:h12
+    endif
 endif
